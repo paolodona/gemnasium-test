@@ -30,7 +30,7 @@ gem 'valid_email'
 
 gem 'activemerchant', :require => 'active_merchant'
 
-gem 'airbrake', '3.0.9' # 3.1+ doesn't work with errbit currently
+gem 'airbrake' #, '3.0.9' # 3.1+ doesn't work with errbit currently
 gem 'airbrake_user_attributes'
 gem 'newrelic_rpm'
 
@@ -42,9 +42,9 @@ gem 'nexmo'
 gem 'hiredis'
 gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
 
-gem 'sidekiq'
+gem 'slim'
 gem 'sinatra' # required by sidekiq/web
-gem 'slim'    # required by sidekiq/web
+gem 'sidekiq'
 
 gem 'phone', :git => 'git@github.com:paolodona/phone.git', :branch => 'master'
 gem 'formatize'
@@ -71,13 +71,20 @@ gem 'compass-rails'
 gem 'sass-rails'
 
 gem 'chronic_duration'
-# gem 'localeapp'
+gem 'localeapp'
 gem 'http_accept_language'
 
 gem 'draper'
 gem 'swfobject-rails'
 gem 'js-routes'
 gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
+
+gem 'virtus' # used for form objects
+
+# twitter bootstrap
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
