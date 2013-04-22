@@ -55,17 +55,34 @@ GIT
     twitter-bootstrap-markup-rails (0.2.0)
       railties (~> 3.0)
 
+GIT
+  remote: https://github.com/paolodona/rails_locale_detection.git
+  revision: 93aeba1fc172b2da19b760c4c8673fd9d89c5c49
+  branch: master
+  specs:
+    rails_locale_detection (2.0.0.pre2)
+      http_accept_language (~> 1.0.2)
+      rails (>= 3.2.13)
+
+GIT
+  remote: https://github.com/paolodona/resources_controller.git
+  revision: a67fbbdfd836e4d50febd720cbf30814d3ad70af
+  branch: master
+  specs:
+    rc_rails (2.1.1)
+      rails (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gemcutter.org/
   specs:
     RedCloth (4.2.9)
-    actionmailer (3.2.12)
-      actionpack (= 3.2.12)
-      mail (~> 2.4.4)
-    actionpack (3.2.12)
-      activemodel (= 3.2.12)
-      activesupport (= 3.2.12)
+    actionmailer (3.2.13)
+      actionpack (= 3.2.13)
+      mail (~> 2.5.3)
+    actionpack (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
@@ -84,22 +101,22 @@ GEM
       json (>= 1.5.1)
       money
       nokogiri
-    activemodel (3.2.12)
-      activesupport (= 3.2.12)
+    activemodel (3.2.13)
+      activesupport (= 3.2.13)
       builder (~> 3.0.0)
-    activerecord (3.2.12)
-      activemodel (= 3.2.12)
-      activesupport (= 3.2.12)
+    activerecord (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
     activerecord-import (0.3.1)
       activerecord (~> 3.0)
       activerecord (~> 3.0)
-    activeresource (3.2.12)
-      activemodel (= 3.2.12)
-      activesupport (= 3.2.12)
-    activesupport (3.2.12)
-      i18n (~> 0.6)
+    activeresource (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
       multi_json (~> 1.0)
     acts_as_list (0.2.0)
       activerecord (>= 3.0)
@@ -238,7 +255,7 @@ GEM
     httparty (0.9.0)
       multi_json (~> 1.0)
       multi_xml
-    i18n (0.6.4)
+    i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.3)
       railties (>= 3.1.0, < 5.0)
@@ -268,12 +285,12 @@ GEM
       json
       rest-client
       ya2yaml
-    mail (2.4.4)
+    mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     metaclass (0.0.1)
-    mime-types (1.22)
+    mime-types (1.23)
     mocha (0.10.5)
       metaclass (~> 0.0.1)
     money (5.1.1)
@@ -324,25 +341,23 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.12)
-      actionmailer (= 3.2.12)
-      actionpack (= 3.2.12)
-      activerecord (= 3.2.12)
-      activeresource (= 3.2.12)
-      activesupport (= 3.2.12)
+    rails (3.2.13)
+      actionmailer (= 3.2.13)
+      actionpack (= 3.2.13)
+      activerecord (= 3.2.13)
+      activeresource (= 3.2.13)
+      activesupport (= 3.2.13)
       bundler (~> 1.0)
-      railties (= 3.2.12)
-    railties (3.2.12)
-      actionpack (= 3.2.12)
-      activesupport (= 3.2.12)
+      railties (= 3.2.13)
+    railties (3.2.13)
+      actionpack (= 3.2.13)
+      activesupport (= 3.2.13)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     raindrops (0.10.0)
     rake (10.0.4)
-    rc_rails (2.1.1)
-      rails (>= 3.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.0.3)
@@ -362,12 +377,12 @@ GEM
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
-    rspec-core (2.12.1)
-    rspec-expectations (2.12.0)
+    rspec-core (2.12.2)
+    rspec-expectations (2.12.1)
       diff-lcs (~> 1.1.3)
     rspec-instafail (0.2.4)
-    rspec-mocks (2.12.0)
-    rspec-rails (2.12.0)
+    rspec-mocks (2.12.2)
+    rspec-rails (2.12.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -391,7 +406,7 @@ GEM
     sendgrid (1.1.0)
       json
       json
-    sextant (0.1.3)
+    sextant (0.2.3)
       activesupport (>= 3.2)
       rails (>= 3.2)
     shoulda-matchers (1.4.2)
@@ -522,8 +537,9 @@ DEPENDENCIES
   quiet_assets
   rack
   rails
+  rails_locale_detection!
   rake
-  rc_rails
+  rc_rails!
   redis-activesupport
   remotipart
   request_store

@@ -64,7 +64,8 @@ gem 'encryptor'
 gem 'spreadsheet_on_rails', :git => 'https://github.com/10to1/spreadsheet_on_rails.git'
 
 gem 'acts_as_list'
-gem 'rc_rails'
+#gem 'rc_rails'
+gem 'rc_rails', :git => 'https://github.com/paolodona/resources_controller.git', :branch => 'master'
 
 gem 'coffee-rails', '~> 3.2.1'
 gem 'activerecord-import'
@@ -74,10 +75,14 @@ gem 'simple-navigation'
 gem 'compass-rails'
 gem 'sass-rails'
 
-gem 'chronic_duration'
+# I18n
 gem 'localeapp'
+gem 'rails_locale_detection', :git => 'https://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
+
+gem 'chronic_duration'
 gem 'http_accept_language'
 
+# Decorators
 gem 'draper'
 gem 'decorates_before_rendering'
 
