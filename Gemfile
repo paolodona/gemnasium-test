@@ -3,23 +3,52 @@ source 'http://gemcutter.org'
 
 gem 'rails'
 gem 'rack'
-
 gem 'unicorn'
 
+# database
+gem 'pg'
+gem 'hiredis'
+gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
+gem 'sinatra' # required by sidekiq/web
+gem 'sidekiq'
+
+# front end
+gem 'slim'
 gem 'jquery-rails-cdn'
 gem 'jquery-rails'
 gem 'underscore-rails'
-gem 'pg'
+gem 'turbolinks'
+gem 'jquery-turbolinks'
+gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
+gem 'formatize'
+gem 'compass-rails'
+gem 'sass-rails'
+gem 'coffee-rails', '~> 3.2.1'
+gem 'swfobject-rails'
+gem 'js-routes'
+# twitter bootstrap
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-gem 'twitter-bootstrap-markup-rails', :git => 'https://github.com/marcocampana/twitter-bootstrap-markup-rails.git', :branch => 'master'
 gem 'devise'
 
+# utilities
+gem 'simple_form'
 gem 'money'
 gem 'money-rails'
-
 gem 'countries'
 gem 'htmlentities'
 gem 'enumerize', :git => 'https://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
+gem 'activemerchant', :require => 'active_merchant'
+gem 'phonie'
+gem 'encryptor'
+gem 'acts_as_list'
+gem 'rc_rails', :git => 'https://github.com/paolodona/resources_controller.git', :branch => 'master'
+gem 'activerecord-import'
+gem 'chronic_duration'
+gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
+gem 'virtus' # used for form objects
 
 # paperclip with S3
 gem 'paperclip'
@@ -27,12 +56,15 @@ gem 'aws-sdk'
 gem 'remotipart'
 gem 'lazy_high_charts'
 
-# Email
+# Email/SMS
 gem 'sendgrid'
 gem 'valid_email'
+gem 'nexmo'
+gem 'nokogiri' # required by premailer - but not listed as dependency
+gem 'premailer', :git => 'https://github.com/lucaspiller/premailer.git'
+gem 'premailer-rails'
 
-gem 'activemerchant', :require => 'active_merchant'
-
+# system health
 gem 'airbrake' #, '3.0.9' # 3.1+ doesn't work with errbit currently
 gem 'airbrake_user_attributes'
 gem 'newrelic_rpm'
@@ -40,62 +72,18 @@ gem 'newrelic_rpm'
 # pagination
 gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
 
-gem 'nexmo'
-
-gem 'hiredis'
-gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
-
-gem 'slim'
-gem 'sinatra' # required by sidekiq/web
-gem 'sidekiq'
-
-gem 'phonie'
-
-gem 'formatize'
-
-gem 'nokogiri' # required by premailer - but not listed as dependency
-gem 'premailer', :git => 'https://github.com/lucaspiller/premailer.git'
-gem 'premailer-rails'
-
+# PDF/Excel generation
 gem 'pdfkit'
-
-gem 'encryptor'
-
 gem 'spreadsheet_on_rails', :git => 'https://github.com/10to1/spreadsheet_on_rails.git'
-
-gem 'acts_as_list'
-#gem 'rc_rails'
-gem 'rc_rails', :git => 'https://github.com/paolodona/resources_controller.git', :branch => 'master'
-
-gem 'coffee-rails', '~> 3.2.1'
-gem 'activerecord-import'
-
-gem 'simple-navigation'
-
-gem 'compass-rails'
-gem 'sass-rails'
 
 # I18n
 gem 'localeapp'
 gem 'rails_locale_detection', :git => 'https://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
-
-gem 'chronic_duration'
-gem 'http_accept_language'
+# gem 'http_accept_language'
 
 # Decorators
 gem 'draper'
 gem 'decorates_before_rendering'
-
-gem 'swfobject-rails'
-gem 'js-routes'
-gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
-
-gem 'virtus' # used for form objects
-
-# twitter bootstrap
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -112,8 +100,8 @@ group :development do
   gem 'sextant'
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
   gem 'quiet_assets'
-  gem 'debugger'
-  gem 'better_errors'
+  # gem 'debugger'
+  # gem 'better_errors'
   gem 'binding_of_caller'
 end
 
