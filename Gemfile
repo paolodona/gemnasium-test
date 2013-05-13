@@ -17,8 +17,6 @@ gem 'slim'
 gem 'jquery-rails-cdn'
 gem 'jquery-rails'
 gem 'underscore-rails'
-gem 'turbolinks'
-gem 'jquery-turbolinks'
 gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
 gem 'formatize'
 gem 'compass-rails'
@@ -101,7 +99,7 @@ group :development do
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
   gem 'quiet_assets'
   # gem 'debugger'
-  # gem 'better_errors'
+  gem 'better_errors'
   gem 'binding_of_caller'
 end
 
@@ -117,7 +115,7 @@ group :test do
   gem 'json_spec'
   gem 'factory_girl'
   gem 'capybara'
-  gem 'capybara-webkit'
+  gem 'capybara-webkit', git: 'git://github.com/thoughtbot/capybara-webkit.git'
   gem 'capybara-screenshot' # Good to spot label and other changes
   gem 'fakeweb'
   gem 'fakeweb-matcher'
