@@ -48,6 +48,7 @@ gem 'chronic_duration'
 gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
 gem 'virtus' # used for form objects
 gem 'paranoia' # sets records as deleted
+gem "recurrence"
 
 # paperclip with S3
 gem 'paperclip'
