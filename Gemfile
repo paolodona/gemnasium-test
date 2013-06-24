@@ -46,7 +46,7 @@ gem 'rc_rails', :git => 'https://github.com/paolodona/resources_controller.git',
 gem 'activerecord-import'
 gem 'chronic_duration'
 gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
-gem 'virtus' # used for form objects
+gem 'virtus', :git => 'https://github.com/solnic/virtus.git' # used for form objects
 gem 'paranoia' # sets records as deleted
 gem "recurrence"
 
