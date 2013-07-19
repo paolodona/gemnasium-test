@@ -34,7 +34,7 @@ gem 'devise'
 # utilities
 gem 'simple_form'
 gem 'money'
-gem 'money-rails'
+gem 'money-rails', :git => 'https://github.com/paolodona/money-rails.git', :branch => 'master'
 gem 'countries'
 gem 'htmlentities'
 gem 'enumerize', :git => 'https://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
@@ -49,6 +49,8 @@ gem 'request_store' # Used instead of Thread.current, protects access in multith
 gem 'virtus', :git => 'https://github.com/solnic/virtus.git' # used for form objects
 gem 'paranoia' # sets records as deleted
 gem "recurrence"
+gem "liquid"
+gem "date_validator"
 
 # paperclip with S3
 gem 'paperclip'
@@ -117,7 +119,8 @@ group :test do
   gem 'json_spec'
   gem 'factory_girl'
   gem 'capybara'
-  gem 'capybara-webkit', git: 'git://github.com/thoughtbot/capybara-webkit.git'
+  gem 'poltergeist'
+  #gem 'capybara-webkit', git: 'https://github.com/thoughtbot/capybara-webkit.git'
   gem 'capybara-screenshot' # Good to spot label and other changes
   gem 'fakeweb'
   gem 'fakeweb-matcher'
