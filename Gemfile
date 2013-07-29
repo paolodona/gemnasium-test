@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
 source 'http://gemcutter.org'
 
-gem 'rails'
+gem 'rails', '4.0.0'
 gem 'rack'
 gem 'unicorn'
 
 # database
 gem 'pg'
-gem 'hiredis'
-gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
+gem 'redis-activesupport', :git => 'https://github.com/jodosha/redis-store.git', :branch => 'master'
 gem 'sinatra' # required by sidekiq/web
 gem 'sidekiq'
 
@@ -17,24 +16,24 @@ gem 'slim'
 gem 'jquery-rails-cdn'
 gem 'jquery-rails'
 gem 'underscore-rails'
-gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
-gem 'formatize'
-gem 'compass-rails'
-gem 'sass-rails'
-gem 'coffee-rails', '~> 3.2.1'
-gem 'swfobject-rails'
-gem 'js-routes'
+gem 'twitter-bootstrap-markup-rails', :git => 'https://github.com/pusewicz/twitter-bootstrap-markup-rails.git', :branch => 'master'
+gem "compass-rails", "~> 2.0.alpha.0"
+gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :branch => 'master'
+gem 'coffee-rails'
+gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
+
 # twitter bootstrap
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem "select2-rails"
 
 gem 'devise'
 
 # utilities
-gem 'simple_form'
+gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'money'
-gem 'money-rails', :git => 'https://github.com/paolodona/money-rails.git', :branch => 'master'
+gem 'money-rails', :git => 'https://github.com/RubyMoney/money-rails.git', :branch => 'master'
 gem 'countries'
 gem 'htmlentities'
 gem 'enumerize', :git => 'https://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
@@ -48,22 +47,20 @@ gem 'chronic_duration'
 gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
 gem 'virtus', :git => 'https://github.com/solnic/virtus.git' # used for form objects
 gem 'paranoia' # sets records as deleted
-gem "recurrence"
-gem "liquid"
+gem "recurrence" # for scheduling visits
+gem "liquid"     # to parse address templates in country objects
 gem "date_validator"
 
-# paperclip with S3
-gem 'paperclip'
 gem 'aws-sdk'
 gem 'remotipart'
-gem 'lazy_high_charts'
+# gem 'lazy_high_charts'
 
 # Email/SMS
 gem 'sendgrid'
 gem 'valid_email'
 gem 'nexmo'
 gem 'nokogiri' # required by premailer - but not listed as dependency
-gem 'premailer', :git => 'https://github.com/lucaspiller/premailer.git'
+gem 'premailer', :github => 'lucaspiller/premailer'
 gem 'premailer-rails'
 
 # system health
@@ -81,17 +78,11 @@ gem 'spreadsheet_on_rails', :git => 'https://github.com/10to1/spreadsheet_on_rai
 # I18n
 gem 'localeapp'
 gem 'rails_locale_detection', :git => 'https://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
-# gem 'http_accept_language'
 
 # Decorators
 gem 'draper'
 gem 'decorates_before_rendering'
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'uglifier', '>= 2.1.2'
 
 group :development do
   gem 'capistrano'
@@ -105,6 +96,7 @@ group :development do
   # gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rails-footnotes', '>= 3.7.9'
 end
 
 group :development, :test do
@@ -116,11 +108,9 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'json_spec'
   gem 'factory_girl'
   gem 'capybara'
   gem 'poltergeist'
-  #gem 'capybara-webkit', git: 'https://github.com/thoughtbot/capybara-webkit.git'
   gem 'capybara-screenshot' # Good to spot label and other changes
   gem 'fakeweb'
   gem 'fakeweb-matcher'
@@ -129,6 +119,4 @@ group :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'test_after_commit'
-  gem 'rspec-rerun'
-  gem 'no_peeping_toms'
 end

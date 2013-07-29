@@ -1,134 +1,565 @@
-source 'https://rubygems.org'
-source 'http://gemcutter.org'
+GIT
+  remote: git://github.com/lucaspiller/premailer.git
+  revision: 1ba71b9b163a5c5e06b4e0680877ce345fdb38de
+  specs:
+    premailer (1.7.3)
+      css_parser (>= 1.1.9)
+      htmlentities (>= 4.0.0)
 
-gem 'rails'
-gem 'rack'
-gem 'unicorn'
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: 87323fd625802f3aea7fd7d8a2fd64016b18cdaa
+  specs:
+    simple_form (3.0.0.rc)
+      actionpack (>= 4.0.0, < 4.1)
+      activemodel (>= 4.0.0, < 4.1)
 
-# database
-gem 'pg'
-gem 'hiredis'
-gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
-gem 'sinatra' # required by sidekiq/web
-gem 'sidekiq'
+GIT
+  remote: https://github.com/10to1/spreadsheet_on_rails.git
+  revision: 6912f1aee9da2f5e5798f2042ad63e80bc56b979
+  specs:
+    spreadsheet_on_rails (1.0.0)
+      rails (>= 3.0.1)
+      spreadsheet
 
-# front end
-gem 'slim'
-gem 'jquery-rails-cdn'
-gem 'jquery-rails'
-gem 'underscore-rails'
-gem 'twitter-bootstrap-markup-rails', '0.3.2.2'
-gem 'formatize'
-gem 'compass-rails'
-gem 'sass-rails'
-gem 'coffee-rails', '~> 3.2.1'
-gem 'swfobject-rails'
-gem 'js-routes'
-# twitter bootstrap
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
+GIT
+  remote: https://github.com/RubyMoney/money-rails.git
+  revision: e2f47bbcae49693febb905b129ce92ac09a7dd95
+  branch: master
+  specs:
+    money-rails (0.8.1)
+      activesupport (>= 3.0)
+      money (~> 5.1.0)
+      railties (>= 3.0)
 
-gem 'devise'
+GIT
+  remote: https://github.com/amatsuda/kaminari.git
+  revision: 2ed8adfe378594ae1585ac4a457a6d01f04478eb
+  specs:
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
 
-# utilities
-gem 'simple_form'
-gem 'money'
-gem 'money-rails', :git => 'https://github.com/paolodona/money-rails.git', :branch => 'master'
-gem 'countries'
-gem 'htmlentities'
-gem 'enumerize', :git => 'https://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
-gem 'activemerchant', :require => 'active_merchant'
-gem 'phonie'
-gem 'encryptor'
-gem 'acts_as_list'
-gem 'rc_rails', :git => 'https://github.com/paolodona/resources_controller.git', :branch => 'master'
-gem 'activerecord-import'
-gem 'chronic_duration'
-gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
-gem 'virtus', :git => 'https://github.com/solnic/virtus.git' # used for form objects
-gem 'paranoia' # sets records as deleted
-gem "recurrence"
-gem "liquid"
-gem "date_validator"
+GIT
+  remote: https://github.com/brainspec/enumerize.git
+  revision: 9dc06ba60d0f134db726c2da52c8d255dbc07eba
+  ref: 9dc06ba60d0f134db726c2da52c8d255dbc07eba
+  specs:
+    enumerize (0.5.1)
+      activesupport (>= 3.2)
 
-# paperclip with S3
-gem 'paperclip'
-gem 'aws-sdk'
-gem 'remotipart'
-gem 'lazy_high_charts'
+GIT
+  remote: https://github.com/ctran/annotate_models.git
+  revision: 18a4e2eb77c8f3ef695b563e4a7ca45dfede819b
+  specs:
+    annotate (2.6.0.beta2)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
 
-# Email/SMS
-gem 'sendgrid'
-gem 'valid_email'
-gem 'nexmo'
-gem 'nokogiri' # required by premailer - but not listed as dependency
-gem 'premailer', :git => 'https://github.com/lucaspiller/premailer.git'
-gem 'premailer-rails'
+GIT
+  remote: https://github.com/geraudmathe/swfobject-rails.git
+  revision: 0e50c7a332ed6c9874cd10277dda85c3b5d71415
+  branch: master
+  specs:
+    swfobject-rails (1.1.1)
+      rails (>= 3.2)
 
-# system health
-gem 'airbrake' #, '3.0.9' # 3.1+ doesn't work with errbit currently
-gem 'airbrake_user_attributes'
-gem 'newrelic_rpm'
+GIT
+  remote: https://github.com/jodosha/redis-store.git
+  revision: 9226b96affdd2e68a477d23bbe8d2f52a857ae6e
+  branch: master
+  specs:
+    redis-activesupport (4.0.0)
+      activesupport (>= 3.2.3)
+      redis-store (~> 1.1.0)
 
-# pagination
-gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
+GIT
+  remote: https://github.com/paolodona/rails_locale_detection.git
+  revision: 0ec1fda9431356d68ea0d94a66e1e947bf0318e7
+  branch: master
+  specs:
+    rails_locale_detection (2.0.0.pre2)
+      http_accept_language (~> 1.0.2)
+      rails (>= 3.2.13)
 
-# PDF/Excel generation
-gem 'pdfkit'
-gem 'spreadsheet_on_rails', :git => 'https://github.com/10to1/spreadsheet_on_rails.git'
+GIT
+  remote: https://github.com/paolodona/resources_controller.git
+  revision: 9de5fb7261db2b2c6b4648bd6379e3ab73d03a5d
+  branch: master
+  specs:
+    rc_rails (2.1.1)
+      rails (>= 3.1.0)
 
-# I18n
-gem 'localeapp'
-gem 'rails_locale_detection', :git => 'https://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
-# gem 'http_accept_language'
+GIT
+  remote: https://github.com/pusewicz/twitter-bootstrap-markup-rails.git
+  revision: 7736a9f79c5df2d9d2914359045bd3c5a9c791e9
+  branch: master
+  specs:
+    twitter-bootstrap-markup-rails (0.3.2.2)
+      railties (>= 3.0)
 
-# Decorators
-gem 'draper'
-gem 'decorates_before_rendering'
+GIT
+  remote: https://github.com/rails/sass-rails.git
+  revision: 31f756f208ee71af935454ab4dfb34786d15e891
+  branch: master
+  specs:
+    sass-rails (4.0.0)
+      railties (>= 4.0.0, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'uglifier', '>= 1.0.3'
-end
+GIT
+  remote: https://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: 3ebe7b161a7699e56431d546aa98034483a3bb3c
+  specs:
+    twitter-bootstrap-rails (2.2.7)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
 
-group :development do
-  gem 'capistrano'
-  gem 'capistrano-ext'
-  gem 'capistrano-detect-migrations'
-  gem 'capistrano-deploytags'
-  gem 'bullet'
-  gem 'sextant'
-  gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
-  gem 'quiet_assets'
-  # gem 'debugger'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
+GIT
+  remote: https://github.com/solnic/virtus.git
+  revision: 28b1c35b75dae05a9b1d61ae2f5de4e3931dcafd
+  specs:
+    virtus (1.0.0.beta0)
+      abstract_type (~> 0.0.5)
+      adamantium (~> 0.0.7)
+      coercible (~> 0.2)
+      descendants_tracker (~> 0.0.1)
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'rake'
-  gem 'rspec-instafail'
-  gem 'wkhtmltopdf-binary'
-end
+GEM
+  remote: https://rubygems.org/
+  remote: http://gemcutter.org/
+  specs:
+    abstract_type (0.0.6)
+    actionmailer (4.0.0)
+      actionpack (= 4.0.0)
+      mail (~> 2.5.3)
+    actionpack (4.0.0)
+      activesupport (= 4.0.0)
+      builder (~> 3.1.0)
+      erubis (~> 2.7.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    active_utils (2.0.0)
+      activesupport (>= 2.3.11)
+      i18n
+    activemerchant (1.34.0)
+      active_utils (>= 1.0.2)
+      activesupport (>= 2.3.14)
+      builder (>= 2.0.0)
+      i18n
+      json (>= 1.5.1)
+      money
+      nokogiri
+    activemodel (4.0.0)
+      activesupport (= 4.0.0)
+      builder (~> 3.1.0)
+    activerecord (4.0.0)
+      activemodel (= 4.0.0)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.0)
+      arel (~> 4.0.0)
+    activerecord-deprecated_finders (1.0.3)
+    activerecord-import (0.4.1)
+      activerecord (>= 3.0)
+    activesupport (4.0.0)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    acts_as_list (0.2.0)
+      activerecord (>= 3.0)
+    adamantium (0.0.11)
+      ice_nine (~> 0.8.0)
+    addressable (2.3.5)
+    airbrake (3.1.12)
+      activesupport
+      builder
+      json
+    airbrake_user_attributes (0.1.6)
+      airbrake (~> 3.1.0)
+    arel (4.0.0)
+    atomic (1.1.10)
+    aws-sdk (1.11.1)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
+    backports (3.3.3)
+    bcrypt-ruby (3.1.1)
+    better_errors (0.9.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    builder (3.1.4)
+    bullet (4.6.0)
+      uniform_notifier
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-deploytags (0.7.0)
+      capistrano
+      capistrano-ext
+    capistrano-detect-migrations (0.6.2)
+      capistrano
+      capistrano-deploytags
+      capistrano-ext
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capybara (2.1.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    capybara-screenshot (0.3.13)
+      capybara (>= 1.0, < 3)
+    celluloid (0.14.1)
+      timers (>= 1.0.0)
+    chronic_duration (0.10.2)
+      numerizer (~> 0.1.1)
+    chunky_png (1.2.8)
+    coderay (1.0.9)
+    coercible (0.2.0)
+      backports (~> 3.0, >= 3.1.0)
+      descendants_tracker (~> 0.0.1)
+    coffee-rails (4.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0.beta, < 5.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.3)
+    commonjs (0.2.6)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (2.0.alpha.0)
+      compass (>= 0.12.2, < 0.14)
+    connection_pool (1.1.0)
+    countries (0.9.2)
+      currencies (>= 0.4.0)
+    css_parser (1.3.4)
+      addressable
+    currencies (0.4.2)
+    database_cleaner (1.0.1)
+    date_validator (0.7.0)
+      activemodel (>= 3)
+    debug_inspector (0.0.2)
+    decorates_before_rendering (0.0.3)
+      activesupport (>= 3.2.6)
+    descendants_tracker (0.0.1)
+    devise (3.0.0)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.3)
+    diff-lcs (1.2.4)
+    draper (1.2.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
+    encryptor (1.1.3)
+    erubis (2.7.0)
+    eventmachine (1.0.3)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    faker (1.1.2)
+      i18n (~> 0.5)
+    fakeweb (1.3.0)
+    fakeweb-matcher (1.2.2)
+      fakeweb (>= 1.2.5)
+      rspec (>= 1.2.0)
+    faye-websocket (0.4.7)
+      eventmachine (>= 0.12.0)
+    fssm (0.2.10)
+    gli (2.7.0)
+    highline (1.6.19)
+    hike (1.2.3)
+    htmlentities (4.3.1)
+    http_accept_language (1.0.2)
+    http_parser.rb (0.5.3)
+    i18n (0.6.4)
+    ice_nine (0.8.0)
+    jquery-rails (3.0.4)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    jquery-rails-cdn (1.0.1)
+      jquery-rails
+    json (1.8.0)
+    kgio (2.8.0)
+    launchy (2.3.0)
+      addressable (~> 2.3)
+    less (2.3.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.3.3)
+      actionpack (>= 3.1)
+      less (~> 2.3.1)
+    libv8 (3.11.8.17)
+    liquid (2.5.1)
+    localeapp (0.6.10)
+      gli
+      i18n
+      json
+      rack
+      rest-client
+      ya2yaml
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.23)
+    mini_portile (0.5.1)
+    minitest (4.7.5)
+    money (5.1.1)
+      i18n (~> 0.6.0)
+    multi_json (1.7.7)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.8)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
+    newrelic_rpm (3.6.6.147)
+    nexmo (1.1.0)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
+    numerizer (0.1.1)
+    orm_adapter (0.4.0)
+    paranoia (2.0.0)
+      activerecord (~> 4.0)
+    pdfkit (0.5.4)
+    pg (0.16.0)
+    phonie (2.1.0)
+      activemodel
+    poltergeist (1.3.0)
+      capybara (~> 2.1.0)
+      faye-websocket (>= 0.4.4, < 0.5.0)
+      http_parser.rb (~> 0.5.3)
+    polyglot (0.3.3)
+    premailer-rails (1.4.0)
+      premailer (~> 1.7)
+      rails (>= 3)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
+    rack (1.5.2)
+    rack-protection (1.5.0)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (4.0.0)
+      actionmailer (= 4.0.0)
+      actionpack (= 4.0.0)
+      activerecord (= 4.0.0)
+      activesupport (= 4.0.0)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.0)
+      sprockets-rails (~> 2.0.0)
+    rails-footnotes (3.7.9)
+      rails (>= 3.0.0)
+    railties (4.0.0)
+      actionpack (= 4.0.0)
+      activesupport (= 4.0.0)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    raindrops (0.11.0)
+    rake (10.1.0)
+    recurrence (1.2.0)
+      activesupport (>= 2.3.0)
+      i18n
+    redis (3.0.4)
+    redis-namespace (1.3.0)
+      redis (~> 3.0.0)
+    redis-store (1.1.2)
+      redis (>= 2.2.0)
+    ref (1.0.5)
+    remotipart (1.2.1)
+    request_store (1.0.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rspec (2.14.1)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rspec-core (2.14.4)
+    rspec-expectations (2.14.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-instafail (0.2.4)
+    rspec-mocks (2.14.1)
+    rspec-rails (2.14.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    ruby-ole (1.2.11.7)
+    sass (3.2.9)
+    select2-rails (3.4.3)
+      sass-rails
+      thor (~> 0.14)
+    sendgrid (1.2.0)
+      json
+      json
+    sextant (0.2.4)
+      rails (>= 3.2)
+    shoulda-matchers (2.2.0)
+      activesupport (>= 3.0.0)
+    sidekiq (2.13.0)
+      celluloid (>= 0.14.1)
+      connection_pool (>= 1.0.0)
+      json
+      redis (>= 3.0)
+      redis-namespace
+    sinatra (1.4.3)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    slim (2.0.0)
+      temple (~> 0.6.5)
+      tilt (~> 1.3, >= 1.3.3)
+    spreadsheet (0.8.7)
+      ruby-ole (>= 1.0)
+    sprockets (2.10.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (2.0.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
+    temple (0.6.5)
+    test_after_commit (0.2.0)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
+    thor (0.18.1)
+    thread_safe (0.1.2)
+      atomic
+    tilt (1.4.1)
+    timecop (0.6.2.2)
+    timers (1.1.0)
+    treetop (1.4.14)
+      polyglot
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.37)
+    uglifier (2.1.2)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
+    underscore-rails (1.5.1)
+    unicorn (4.6.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    uniform_notifier (1.2.0)
+    uuidtools (2.1.4)
+    valid_email (0.0.4)
+      activemodel
+      mail
+    warden (1.2.3)
+      rack (>= 1.0)
+    wkhtmltopdf-binary (0.9.9.1)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
+    ya2yaml (0.31)
 
-group :test do
-  gem 'shoulda-matchers'
-  gem 'json_spec'
-  gem 'factory_girl'
-  gem 'capybara'
-  gem 'poltergeist'
-  #gem 'capybara-webkit', git: 'https://github.com/thoughtbot/capybara-webkit.git'
-  gem 'capybara-screenshot' # Good to spot label and other changes
-  gem 'fakeweb'
-  gem 'fakeweb-matcher'
-  gem 'timecop'
-  gem 'launchy' #to open pages in integration tests
-  gem 'database_cleaner'
-  gem 'faker'
-  gem 'test_after_commit'
-  gem 'rspec-rerun'
-  gem 'no_peeping_toms'
-end
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activemerchant
+  activerecord-import
+  acts_as_list
+  airbrake
+  airbrake_user_attributes
+  annotate!
+  aws-sdk
+  better_errors
+  binding_of_caller
+  bullet
+  capistrano
+  capistrano-deploytags
+  capistrano-detect-migrations
+  capistrano-ext
+  capybara
+  capybara-screenshot
+  chronic_duration
+  coffee-rails
+  compass-rails (~> 2.0.alpha.0)
+  countries
+  database_cleaner
+  date_validator
+  decorates_before_rendering
+  devise
+  draper
+  encryptor
+  enumerize!
+  factory_girl
+  faker
+  fakeweb
+  fakeweb-matcher
+  htmlentities
+  jquery-rails
+  jquery-rails-cdn
+  kaminari!
+  launchy
+  less-rails
+  liquid
+  localeapp
+  money
+  money-rails!
+  newrelic_rpm
+  nexmo
+  nokogiri
+  paranoia
+  pdfkit
+  pg
+  phonie
+  poltergeist
+  premailer!
+  premailer-rails
+  quiet_assets
+  rack
+  rails (= 4.0.0)
+  rails-footnotes (>= 3.7.9)
+  rails_locale_detection!
+  rake
+  rc_rails!
+  recurrence
+  redis-activesupport!
+  remotipart
+  request_store
+  rspec-instafail
+  rspec-rails
+  sass-rails!
+  select2-rails
+  sendgrid
+  sextant
+  shoulda-matchers
+  sidekiq
+  simple_form!
+  sinatra
+  slim
+  spreadsheet_on_rails!
+  swfobject-rails!
+  test_after_commit
+  therubyracer
+  timecop
+  twitter-bootstrap-markup-rails!
+  twitter-bootstrap-rails!
+  uglifier (>= 2.1.2)
+  underscore-rails
+  unicorn
+  valid_email
+  virtus!
+  wkhtmltopdf-binary
