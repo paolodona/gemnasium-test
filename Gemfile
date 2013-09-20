@@ -22,12 +22,16 @@ gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :branch => 
 gem 'coffee-rails'
 gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
 
+# custom json views
+gem 'rabl'
+gem 'oj'
+
 # twitter bootstrap
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem "select2-rails"
 
+gem "select2-rails"
 gem 'devise'
 
 # utilities
@@ -65,7 +69,6 @@ gem 'premailer-rails'
 
 # system health
 gem 'airbrake' #, '3.0.9' # 3.1+ doesn't work with errbit currently
-gem 'airbrake_user_attributes'
 gem 'newrelic_rpm'
 
 # pagination
