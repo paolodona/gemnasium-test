@@ -21,6 +21,7 @@ gem "compass-rails", "~> 2.0.alpha.0"
 gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :branch => 'master'
 gem 'coffee-rails'
 gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
+gem 'js-routes'
 
 # custom json views
 gem 'rabl'
@@ -99,7 +100,7 @@ group :development do
   # gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'rails-footnotes', '>= 3.7.9'
+  # gem 'rails-footnotes', '>= 3.7.9'
 end
 
 group :development, :test do
