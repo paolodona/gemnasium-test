@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'http://gemcutter.org'
 
 gem 'rails', '4.0.0'
 gem 'rack'
@@ -16,11 +15,11 @@ gem 'slim'
 gem 'jquery-rails-cdn'
 gem 'jquery-rails'
 gem 'underscore-rails'
-gem 'twitter-bootstrap-markup-rails', :git => 'https://github.com/pusewicz/twitter-bootstrap-markup-rails.git', :branch => 'master'
+gem 'twitter-bootstrap-markup-rails', :git => 'http://github.com/pusewicz/twitter-bootstrap-markup-rails.git', :branch => 'master'
 gem "compass-rails", "~> 2.0.alpha.0"
-gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :branch => 'master'
+gem 'sass-rails', :git => 'http://github.com/rails/sass-rails.git', :branch => 'master'
 gem 'coffee-rails'
-gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
+gem 'swfobject-rails', :git => 'http://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
 gem 'js-routes'
 
 # custom json views
@@ -30,7 +29,7 @@ gem 'oj'
 # twitter bootstrap
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem "select2-rails"
 gem 'devise'
@@ -38,19 +37,19 @@ gem 'devise'
 # utilities
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'money'
-gem 'money-rails', :git => 'https://github.com/RubyMoney/money-rails.git', :branch => 'master'
+gem 'money-rails', :git => 'http://github.com/RubyMoney/money-rails.git', :branch => 'master'
 gem 'countries'
 gem 'htmlentities'
-gem 'enumerize', :git => 'https://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
+gem 'enumerize', :git => 'http://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
 gem 'activemerchant', :require => 'active_merchant'
 gem 'phonie'
 gem 'encryptor'
 gem 'acts_as_list'
-gem 'rc_rails', :git => 'https://github.com/paolodona/resources_controller.git', :branch => 'master'
+gem 'rc_rails', :git => 'http://github.com/paolodona/resources_controller.git', :branch => 'master'
 gem 'activerecord-import'
 gem 'chronic_duration'
 gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
-gem 'virtus', :git => 'https://github.com/solnic/virtus.git' # used for form objects
+gem 'virtus', :git => 'http://github.com/solnic/virtus.git' # used for form objects
 gem 'paranoia' # sets records as deleted
 gem "recurrence" # for scheduling visits
 gem "liquid"     # to parse address templates in country objects
@@ -73,15 +72,15 @@ gem 'airbrake' #, '3.0.9' # 3.1+ doesn't work with errbit currently
 gem 'newrelic_rpm'
 
 # pagination
-gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
+gem 'kaminari', :git => 'http://github.com/amatsuda/kaminari.git'
 
 # PDF/Excel generation
 gem 'pdfkit'
-gem 'spreadsheet_on_rails', :git => 'https://github.com/10to1/spreadsheet_on_rails.git'
+gem 'spreadsheet_on_rails', :git => 'http://github.com/10to1/spreadsheet_on_rails.git'
 
 # I18n
 gem 'localeapp'
-gem 'rails_locale_detection', :git => 'https://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
+gem 'rails_locale_detection', :git => 'http://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
 
 # Decorators
 gem 'draper'
@@ -95,7 +94,7 @@ group :development do
   gem 'capistrano-deploytags'
   gem 'bullet'
   gem 'sextant'
-  gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
+  gem 'annotate', :git => 'http://github.com/ctran/annotate_models.git'
   gem 'quiet_assets'
   # gem 'debugger'
   gem 'better_errors'

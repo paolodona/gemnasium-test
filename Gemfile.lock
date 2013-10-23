@@ -15,7 +15,7 @@ GIT
       activemodel (>= 4.0.0, < 4.1)
 
 GIT
-  remote: https://github.com/10to1/spreadsheet_on_rails.git
+  remote: http://github.com/10to1/spreadsheet_on_rails.git
   revision: 6912f1aee9da2f5e5798f2042ad63e80bc56b979
   specs:
     spreadsheet_on_rails (1.0.0)
@@ -23,8 +23,8 @@ GIT
       spreadsheet
 
 GIT
-  remote: https://github.com/RubyMoney/money-rails.git
-  revision: e2f47bbcae49693febb905b129ce92ac09a7dd95
+  remote: http://github.com/RubyMoney/money-rails.git
+  revision: fe757b0b48bd59b7e5277ad7b3ce8b78e3b8d646
   branch: master
   specs:
     money-rails (0.8.1)
@@ -33,15 +33,15 @@ GIT
       railties (>= 3.0)
 
 GIT
-  remote: https://github.com/amatsuda/kaminari.git
-  revision: 2ed8adfe378594ae1585ac4a457a6d01f04478eb
+  remote: http://github.com/amatsuda/kaminari.git
+  revision: d5757227d7fafacefeab3d585f41c11933bd46db
   specs:
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
 
 GIT
-  remote: https://github.com/brainspec/enumerize.git
+  remote: http://github.com/brainspec/enumerize.git
   revision: 9dc06ba60d0f134db726c2da52c8d255dbc07eba
   ref: 9dc06ba60d0f134db726c2da52c8d255dbc07eba
   specs:
@@ -49,20 +49,75 @@ GIT
       activesupport (>= 3.2)
 
 GIT
-  remote: https://github.com/ctran/annotate_models.git
-  revision: 18a4e2eb77c8f3ef695b563e4a7ca45dfede819b
+  remote: http://github.com/ctran/annotate_models.git
+  revision: 54bdf7e2963b673a3c4f865d56dc5055dbff11cd
   specs:
     annotate (2.6.0.beta2)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
 
 GIT
-  remote: https://github.com/geraudmathe/swfobject-rails.git
+  remote: http://github.com/geraudmathe/swfobject-rails.git
   revision: 0e50c7a332ed6c9874cd10277dda85c3b5d71415
   branch: master
   specs:
     swfobject-rails (1.1.1)
       rails (>= 3.2)
+
+GIT
+  remote: http://github.com/paolodona/rails_locale_detection.git
+  revision: 0ec1fda9431356d68ea0d94a66e1e947bf0318e7
+  branch: master
+  specs:
+    rails_locale_detection (2.0.0.pre2)
+      http_accept_language (~> 1.0.2)
+      rails (>= 3.2.13)
+
+GIT
+  remote: http://github.com/paolodona/resources_controller.git
+  revision: 9de5fb7261db2b2c6b4648bd6379e3ab73d03a5d
+  branch: master
+  specs:
+    rc_rails (2.1.1)
+      rails (>= 3.1.0)
+
+GIT
+  remote: http://github.com/pusewicz/twitter-bootstrap-markup-rails.git
+  revision: 7736a9f79c5df2d9d2914359045bd3c5a9c791e9
+  branch: master
+  specs:
+    twitter-bootstrap-markup-rails (0.3.2.2)
+      railties (>= 3.0)
+
+GIT
+  remote: http://github.com/rails/sass-rails.git
+  revision: debabfce664370f18e5ed6e6ae2fb3772883a284
+  branch: master
+  specs:
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
+
+GIT
+  remote: http://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: 16d9cd83b17b1d2d4fc5b7e7c3c1ea968688ae62
+  specs:
+    twitter-bootstrap-rails (2.2.8)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
+
+GIT
+  remote: http://github.com/solnic/virtus.git
+  revision: d344e5b4373ee119b04cde36b4ba8ab010e8c211
+  specs:
+    virtus (1.0.0)
+      axiom-types (~> 0.0.5)
+      coercible (~> 0.2)
+      descendants_tracker (~> 0.0.1)
+      equalizer (~> 0.0.7)
 
 GIT
   remote: https://github.com/jodosha/redis-store.git
@@ -73,66 +128,9 @@ GIT
       activesupport (>= 3.2.3)
       redis-store (~> 1.1.0)
 
-GIT
-  remote: https://github.com/paolodona/rails_locale_detection.git
-  revision: 0ec1fda9431356d68ea0d94a66e1e947bf0318e7
-  branch: master
-  specs:
-    rails_locale_detection (2.0.0.pre2)
-      http_accept_language (~> 1.0.2)
-      rails (>= 3.2.13)
-
-GIT
-  remote: https://github.com/paolodona/resources_controller.git
-  revision: 9de5fb7261db2b2c6b4648bd6379e3ab73d03a5d
-  branch: master
-  specs:
-    rc_rails (2.1.1)
-      rails (>= 3.1.0)
-
-GIT
-  remote: https://github.com/pusewicz/twitter-bootstrap-markup-rails.git
-  revision: 7736a9f79c5df2d9d2914359045bd3c5a9c791e9
-  branch: master
-  specs:
-    twitter-bootstrap-markup-rails (0.3.2.2)
-      railties (>= 3.0)
-
-GIT
-  remote: https://github.com/rails/sass-rails.git
-  revision: 31f756f208ee71af935454ab4dfb34786d15e891
-  branch: master
-  specs:
-    sass-rails (4.0.0)
-      railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0)
-
-GIT
-  remote: https://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 3ebe7b161a7699e56431d546aa98034483a3bb3c
-  specs:
-    twitter-bootstrap-rails (2.2.7)
-      actionpack (>= 3.1)
-      execjs
-      rails (>= 3.1)
-      railties (>= 3.1)
-
-GIT
-  remote: https://github.com/solnic/virtus.git
-  revision: 28b1c35b75dae05a9b1d61ae2f5de4e3931dcafd
-  specs:
-    virtus (1.0.0.beta0)
-      abstract_type (~> 0.0.5)
-      adamantium (~> 0.0.7)
-      coercible (~> 0.2)
-      descendants_tracker (~> 0.0.1)
-
 GEM
   remote: https://rubygems.org/
-  remote: http://gemcutter.org/
   specs:
-    abstract_type (0.0.6)
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
       mail (~> 2.5.3)
@@ -142,11 +140,11 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    active_utils (2.0.0)
+    active_utils (2.0.1)
       activesupport (>= 2.3.11)
       i18n
-    activemerchant (1.38.1)
-      active_utils (~> 2.0)
+    activemerchant (1.40.0)
+      active_utils (~> 2.0, >= 2.0.1)
       activesupport (>= 2.3.14, < 5.0.0)
       builder (>= 2.1.2, < 4.0.0)
       i18n (~> 0.5)
@@ -172,8 +170,6 @@ GEM
       tzinfo (~> 0.3.37)
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
-    adamantium (0.0.11)
-      ice_nine (~> 0.8.0)
     addressable (2.3.5)
     airbrake (3.1.14)
       builder
@@ -184,7 +180,10 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
-    backports (3.3.3)
+    axiom-types (0.0.5)
+      descendants_tracker (~> 0.0.1)
+      ice_nine (~> 0.9)
+    backports (3.3.5)
     bcrypt-ruby (3.1.2)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
@@ -217,7 +216,7 @@ GEM
       xpath (~> 2.0)
     capybara-screenshot (0.3.13)
       capybara (>= 1.0, < 3)
-    celluloid (0.15.1)
+    celluloid (0.15.2)
       timers (~> 1.1.0)
     chronic_duration (0.10.2)
       numerizer (~> 0.1.1)
@@ -226,9 +225,9 @@ GEM
     coercible (0.2.0)
       backports (~> 3.0, >= 3.1.0)
       descendants_tracker (~> 0.0.1)
-    coffee-rails (4.0.0)
+    coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0.beta, < 5.0)
+      railties (>= 4.0.0, < 5.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -252,7 +251,7 @@ GEM
     debug_inspector (0.0.2)
     decorates_before_rendering (0.0.3)
       activesupport (>= 3.2.6)
-    descendants_tracker (0.0.1)
+    descendants_tracker (0.0.3)
     devise (3.1.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -265,9 +264,10 @@ GEM
       activesupport (>= 3.0)
       request_store (~> 1.0.3)
     encryptor (1.1.3)
+    equalizer (0.0.7)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    execjs (2.0.1)
+    execjs (2.0.2)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     faker (1.2.0)
@@ -279,22 +279,22 @@ GEM
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
     fssm (0.2.10)
-    gli (2.8.0)
+    gli (2.8.1)
     highline (1.6.19)
     hike (1.2.3)
     htmlentities (4.3.1)
     http_accept_language (1.0.2)
     http_parser.rb (0.5.3)
     i18n (0.6.5)
-    ice_nine (0.8.0)
+    ice_nine (0.10.0)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-rails-cdn (1.0.1)
       jquery-rails
-    js-routes (0.9.0)
+    js-routes (0.9.4)
       rails (>= 3.2)
-    json (1.8.0)
+    json (1.8.1)
     kgio (2.8.0)
     launchy (2.3.0)
       addressable (~> 2.3)
@@ -305,7 +305,7 @@ GEM
       less (~> 2.4.0)
     libv8 (3.16.14.3)
     liquid (2.5.3)
-    localeapp (0.6.12)
+    localeapp (0.6.14)
       gli
       i18n
       json
@@ -320,7 +320,7 @@ GEM
     minitest (4.7.5)
     money (5.1.1)
       i18n (~> 0.6.0)
-    multi_json (1.8.1)
+    multi_json (1.8.2)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -328,18 +328,18 @@ GEM
     net-ssh (2.6.8)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    newrelic_rpm (3.6.7.152)
+    newrelic_rpm (3.6.8.168)
     nexmo (1.2.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     numerizer (0.1.1)
-    oj (2.1.4)
+    oj (2.1.7)
     orm_adapter (0.4.0)
     paranoia (2.0.0)
       activerecord (~> 4.0)
     pdfkit (0.5.4)
     pg (0.17.0)
-    phonie (2.1.1)
+    phonie (2.1.2)
       activemodel
     poltergeist (1.3.0)
       capybara (~> 2.1.0)
@@ -351,7 +351,7 @@ GEM
       rails (>= 3)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
-    rabl (0.8.6)
+    rabl (0.9.0)
       activesupport (>= 2.3.14)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -376,7 +376,7 @@ GEM
     recurrence (1.2.0)
       activesupport (>= 2.3.0)
       i18n
-    redis (3.0.4)
+    redis (3.0.5)
     redis-namespace (1.3.1)
       redis (~> 3.0.0)
     redis-store (1.1.2)
@@ -403,9 +403,8 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     ruby-ole (1.2.11.7)
-    sass (3.2.10)
-    select2-rails (3.4.9)
-      sass-rails
+    sass (3.2.12)
+    select2-rails (3.5.0)
       thor (~> 0.14)
     sendgrid (1.2.0)
       json
@@ -414,8 +413,8 @@ GEM
       rails (>= 3.2)
     shoulda-matchers (2.3.0)
       activesupport (>= 3.0.0)
-    sidekiq (2.14.1)
-      celluloid (>= 0.14.1)
+    sidekiq (2.15.2)
+      celluloid (>= 0.15.2)
       connection_pool (>= 1.0.0)
       json
       redis (>= 3.0.4)
@@ -427,14 +426,14 @@ GEM
     slim (2.0.0)
       temple (~> 0.6.5)
       tilt (~> 1.3, >= 1.3.3)
-    spreadsheet (0.8.7)
+    spreadsheet (0.9.0)
       ruby-ole (>= 1.0)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.0.0)
+    sprockets-rails (2.0.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
@@ -452,11 +451,11 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.37)
+    tzinfo (0.3.38)
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    underscore-rails (1.5.1)
+    underscore-rails (1.5.2)
     unicorn (4.6.3)
       kgio (~> 2.6)
       rack
