@@ -1,41 +1,39 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 gem 'rack'
 gem 'unicorn'
 
 # database
 gem 'pg'
-gem 'redis-activesupport', :git => 'https://github.com/jodosha/redis-store.git', :branch => 'master'
+gem 'redis-activesupport'
 gem 'sinatra' # required by sidekiq/web
 gem 'sidekiq'
 
 # front end
-gem 'slim'
-gem 'jquery-rails-cdn'
-gem 'jquery-rails'
-gem 'underscore-rails'
-gem 'twitter-bootstrap-markup-rails', :git => 'http://github.com/pusewicz/twitter-bootstrap-markup-rails.git', :branch => 'master'
-gem "compass-rails", "~> 2.0.alpha.0"
-gem 'sass-rails', :git => 'http://github.com/rails/sass-rails.git', :branch => 'master'
+gem "select2-rails"
+gem "therubyracer"
+gem 'bourbon'
 gem 'coffee-rails'
-gem 'swfobject-rails', :git => 'http://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
+gem 'jquery-rails'
+gem 'jquery-rails-cdn'
 gem 'js-routes'
+gem 'neat'
+gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :branch => 'master'
+gem 'slim'
+gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
+gem 'turbolinks'
+gem 'jquery-turbolinks'
+gem 'underscore-rails'
 
 # custom json views
 gem 'rabl'
 gem 'oj'
 
-# twitter bootstrap
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
-
-gem "select2-rails"
 gem 'devise'
 
 # utilities
-gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'simple_form', :git => 'http://github.com/plataformatec/simple_form.git'
 gem 'money'
 gem 'money-rails', :git => 'http://github.com/RubyMoney/money-rails.git', :branch => 'master'
 gem 'countries'
@@ -77,10 +75,12 @@ gem 'kaminari', :git => 'http://github.com/amatsuda/kaminari.git'
 # PDF/Excel generation
 gem 'pdfkit'
 gem 'spreadsheet_on_rails', :git => 'http://github.com/10to1/spreadsheet_on_rails.git'
+gem 'wkhtmltopdf-binary'
 
 # I18n
 gem 'localeapp'
 gem 'rails_locale_detection', :git => 'http://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
+gem 'delocalize', :git => 'http://github.com/paolodona/delocalize', :branch => 'master' # might need to switch to https://github.com/clemens/delocalize once it supports rails4
 
 # Decorators
 gem 'draper'
@@ -88,32 +88,31 @@ gem 'decorates_before_rendering'
 gem 'uglifier', '>= 2.1.2'
 
 group :development do
-  gem 'capistrano'
-  gem 'capistrano-ext'
-  gem 'capistrano-detect-migrations'
-  gem 'capistrano-deploytags'
+  gem 'capistrano', '~> 2.15'
+  gem 'capistrano-ext', '~> 1.2'
+  gem 'capistrano-detect-migrations', '~> 0.6'
+  gem 'capistrano-deploytags', '~> 0.8'
   gem 'bullet'
   gem 'sextant'
   gem 'annotate', :git => 'http://github.com/ctran/annotate_models.git'
   gem 'quiet_assets'
-  # gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
-  # gem 'rails-footnotes', '>= 3.7.9'
 end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'rake'
   gem 'rspec-instafail'
-  gem 'wkhtmltopdf-binary'
+  gem 'mail_view'
+  gem 'byebug'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl'
   gem 'capybara'
-  gem 'poltergeist'
+  gem 'poltergeist', :git => 'https://github.com/jonleighton/poltergeist.git', :branch => 'master'
   gem 'capybara-screenshot' # Good to spot label and other changes
   gem 'fakeweb'
   gem 'fakeweb-matcher'
@@ -122,4 +121,5 @@ group :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'test_after_commit'
+  gem 'selenium-webdriver'
 end
