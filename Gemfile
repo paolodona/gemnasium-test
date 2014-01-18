@@ -40,7 +40,6 @@ gem 'countries'
 gem 'htmlentities'
 gem 'enumerize', :git => 'http://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
 gem 'activemerchant', :require => 'active_merchant'
-gem 'phonie'
 gem 'encryptor'
 gem 'acts_as_list'
 gem 'rc_rails', :git => 'http://github.com/paolodona/resources_controller.git', :branch => 'master'
@@ -62,11 +61,11 @@ gem 'sendgrid'
 gem 'valid_email'
 gem 'nexmo'
 gem 'nokogiri' # required by premailer - but not listed as dependency
-gem 'premailer', :github => 'lucaspiller/premailer'
+gem 'premailer', :git => 'http://github.com/lucaspiller/premailer.git'
 gem 'premailer-rails'
 
 # system health
-gem 'airbrake' #, '3.0.9' # 3.1+ doesn't work with errbit currently
+gem 'airbrake'
 gem 'newrelic_rpm'
 
 # pagination
