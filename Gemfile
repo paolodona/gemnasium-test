@@ -35,6 +35,7 @@ gem 'devise'
 # utilities
 gem 'simple_form', :git => 'http://github.com/plataformatec/simple_form.git'
 gem 'money'
+gem 'monetize'
 gem 'money-rails', :git => 'http://github.com/RubyMoney/money-rails.git', :branch => 'master'
 gem 'countries'
 gem 'htmlentities'
@@ -119,6 +120,5 @@ group :test do
   gem 'launchy' #to open pages in integration tests
   gem 'database_cleaner'
   gem 'faker'
-  gem 'test_after_commit'
   gem 'selenium-webdriver'
 end
