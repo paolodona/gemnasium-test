@@ -64,6 +64,7 @@ gem 'nexmo'
 gem 'nokogiri' # required by premailer - but not listed as dependency
 gem 'premailer', :git => 'http://github.com/lucaspiller/premailer.git'
 gem 'premailer-rails'
+gem 'mail_view'
 
 # system health
 gem 'airbrake'
@@ -104,7 +105,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rake'
   gem 'rspec-instafail'
-  gem 'mail_view'
   gem 'byebug'
 end
 
