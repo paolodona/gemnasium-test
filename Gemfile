@@ -31,13 +31,14 @@ gem 'rabl'
 gem 'oj'
 
 gem 'devise'
+gem 'devise_invitable', :git => 'http://github.com/scambra/devise_invitable', :ref => 'd3441d0f1083e9a858070aae64d1e683a2be42d2'
 
 # utilities
 gem 'simple_form', :git => 'http://github.com/plataformatec/simple_form.git'
-gem 'money'
+gem 'money', :git => 'http://github.com/RubyMoney/money.git', :tag => 'v6.1.0.beta1'
 gem 'monetize'
-gem 'money-rails', :git => 'http://github.com/RubyMoney/money-rails.git', :branch => 'master'
-gem 'countries'
+gem 'money-rails', :git => 'http://github.com/RubyMoney/money-rails.git', :branch => 'upgrade_to_money_6_1'
+gem 'countries', :git => 'http://github.com/hexorx/countries', :branch => 'master'
 gem 'htmlentities'
 gem 'enumerize', :git => 'http://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
 gem 'activemerchant', :require => 'active_merchant'
@@ -62,7 +63,7 @@ gem 'sendgrid'
 gem 'valid_email'
 gem 'nexmo'
 gem 'nokogiri' # required by premailer - but not listed as dependency
-gem 'premailer', :git => 'http://github.com/lucaspiller/premailer.git'
+gem 'premailer' # We use the original gem to use the data-premailer attribute, :git => 'http://github.com/lucaspiller/premailer.git'
 gem 'premailer-rails'
 gem 'mail_view'
 
@@ -81,7 +82,7 @@ gem 'wkhtmltopdf-binary'
 # I18n
 gem 'localeapp'
 gem 'rails_locale_detection', :git => 'http://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
-gem 'delocalize', :git => 'http://github.com/paolodona/delocalize', :branch => 'master' # might need to switch to https://github.com/clemens/delocalize once it supports rails4
+gem 'unlocalize', :git => 'http://github.com/paolodona/unlocalize', :branch => 'master'
 
 # Decorators
 gem 'draper'
