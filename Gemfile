@@ -13,18 +13,17 @@ gem 'sidekiq'
 # front end
 gem "select2-rails"
 gem "therubyracer"
-gem 'bourbon'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jquery-rails-cdn'
 gem 'js-routes'
-gem 'neat'
 gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :branch => 'master'
 gem 'slim'
 gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'underscore-rails'
+gem 'foundation-rails'
 
 # custom json views
 gem 'rabl'
@@ -35,7 +34,7 @@ gem 'devise_invitable', :git => 'http://github.com/scambra/devise_invitable', :r
 
 # utilities
 gem 'simple_form', :git => 'http://github.com/plataformatec/simple_form.git'
-gem 'money', :git => 'http://github.com/RubyMoney/money.git', :tag => 'v6.1.0.beta1'
+gem 'money', '6.1.1', :git => 'http://github.com/RubyMoney/money.git'
 gem 'monetize'
 gem 'money-rails', :git => 'http://github.com/RubyMoney/money-rails.git', :branch => 'upgrade_to_money_6_1'
 gem 'countries', :git => 'http://github.com/hexorx/countries', :branch => 'master'
@@ -53,6 +52,8 @@ gem 'paranoia' # sets records as deleted
 gem "recurrence" # for scheduling visits
 gem "liquid"     # to parse address templates in country objects
 gem "date_validator"
+gem "browser"
+gem 'wicked' # Wizards
 
 gem 'aws-sdk'
 gem 'remotipart'
@@ -62,8 +63,9 @@ gem 'remotipart'
 gem 'sendgrid'
 gem 'valid_email'
 gem 'nexmo'
+gem 'ringcaptcha', :git => 'https://github.com/paolodona/ringcaptcha.git'
 gem 'nokogiri' # required by premailer - but not listed as dependency
-gem 'premailer' # We use the original gem to use the data-premailer attribute, :git => 'http://github.com/lucaspiller/premailer.git'
+gem 'premailer'
 gem 'premailer-rails'
 gem 'mail_view'
 
@@ -74,9 +76,8 @@ gem 'newrelic_rpm'
 # pagination
 gem 'kaminari', :git => 'http://github.com/amatsuda/kaminari.git'
 
-# PDF/Excel generation
+# PDF/CSV generation
 gem 'pdfkit'
-gem 'spreadsheet_on_rails', :git => 'http://github.com/10to1/spreadsheet_on_rails.git'
 gem 'wkhtmltopdf-binary'
 
 # I18n
@@ -103,23 +104,20 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'rake'
-  gem 'rspec-instafail'
   gem 'byebug'
 end
 
 group :test do
+  gem 'rspec', '~> 2.14.1'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl'
   gem 'capybara'
-  gem 'poltergeist', :git => 'https://github.com/jonleighton/poltergeist.git', :branch => 'master'
-  gem 'capybara-screenshot' # Good to spot label and other changes
+  gem 'capybara-screenshot'
   gem 'fakeweb'
-  gem 'fakeweb-matcher'
   gem 'timecop'
   gem 'launchy' #to open pages in integration tests
-  gem 'database_cleaner'
   gem 'faker'
   gem 'selenium-webdriver'
 end
