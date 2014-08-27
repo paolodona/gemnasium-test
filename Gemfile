@@ -6,9 +6,13 @@ gem 'unicorn'
 
 # database
 gem 'pg'
-gem 'redis-activesupport'
+
+gem 'hiredis'
+gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
+
 gem 'sinatra' # required by sidekiq/web
 gem 'sidekiq'
+gem 'sidetiq', :git => 'https://github.com/tobiassvn/sidetiq' # cron jobs in sidekiq
 
 # front end
 gem "select2-rails"
@@ -23,7 +27,10 @@ gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.g
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'underscore-rails'
-gem 'foundation-rails'
+gem 'foundation-rails', '5.2.2.0'
+gem 'meta-tags', require:'meta_tags' # see https://github.com/kpumuk/meta-tags
+gem 'redcarpet'
+gem 'font-awesome-sass'
 
 # custom json views
 gem 'rabl'
@@ -55,8 +62,12 @@ gem "date_validator"
 gem "browser"
 gem 'wicked' # Wizards
 
+# uploads
+gem 'carrierwave'
+gem 'fog'
 gem 'aws-sdk'
 gem 'remotipart'
+gem 'mini_magick'
 # gem 'lazy_high_charts'
 
 # Email/SMS
@@ -89,6 +100,11 @@ gem 'unlocalize', :git => 'http://github.com/paolodona/unlocalize', :branch => '
 gem 'draper'
 gem 'decorates_before_rendering'
 gem 'uglifier', '>= 2.1.2'
+
+# sitemap
+gem 'sitemap_generator'
+
+gem 'utf8-cleaner' # leave this last so that middleware is the first in the chain
 
 group :development do
   gem 'capistrano', '~> 2.15'
