@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.5'
 gem 'rack'
 gem 'unicorn'
 
@@ -21,7 +21,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jquery-rails-cdn'
 gem 'js-routes'
-gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :branch => 'master'
+gem 'sass-rails', "4.0.2"
 gem 'slim'
 gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
 gem 'turbolinks'
@@ -53,7 +53,7 @@ gem 'acts_as_list'
 gem 'rc_rails', :git => 'http://github.com/paolodona/resources_controller.git', :branch => 'master'
 gem 'activerecord-import'
 gem 'chronic_duration'
-gem 'request_store' # Used instead of Thread.current, protects access in multithreaded environments
+gem 'request_store', '~> 1.0.3' # Used instead of Thread.current, protects access in multithreaded environments
 gem 'virtus', :git => 'http://github.com/solnic/virtus.git' # used for form objects
 gem 'paranoia' # sets records as deleted
 gem "recurrence" # for scheduling visits
@@ -78,7 +78,6 @@ gem 'ringcaptcha', :git => 'https://github.com/paolodona/ringcaptcha.git'
 gem 'nokogiri' # required by premailer - but not listed as dependency
 gem 'premailer'
 gem 'premailer-rails'
-gem 'mail_view'
 
 # system health
 gem 'airbrake'
@@ -97,7 +96,7 @@ gem 'rails_locale_detection', :git => 'http://github.com/paolodona/rails_locale_
 gem 'unlocalize', :git => 'http://github.com/paolodona/unlocalize', :branch => 'master'
 
 # Decorators
-gem 'draper'
+gem 'draper', '~> 1.3'
 gem 'decorates_before_rendering'
 gem 'uglifier', '>= 2.1.2'
 
