@@ -21,7 +21,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jquery-rails-cdn'
 gem 'js-routes'
-gem 'sass-rails', "4.0.2"
+gem 'sass-rails', "~>4.0.2"
 gem 'slim'
 gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
 gem 'turbolinks'
