@@ -116,15 +116,17 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem "spring"
 end
 
 group :development, :test do
   gem 'rake'
   gem 'byebug'
+  gem 'spring-commands-rspec'
+  gem 'rspec', '~> 2.14.1'
 end
 
 group :test do
-  gem 'rspec', '~> 2.14.1'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl'
