@@ -41,9 +41,8 @@ gem 'devise_invitable', :git => 'http://github.com/scambra/devise_invitable', :r
 
 # utilities
 gem 'simple_form', :git => 'http://github.com/plataformatec/simple_form.git'
-gem 'money', '6.1.1', :git => 'http://github.com/RubyMoney/money.git'
-gem 'monetize'
-gem 'money-rails', :git => 'http://github.com/RubyMoney/money-rails.git', :branch => 'upgrade_to_money_6_1'
+gem 'money', '6.4.0'
+gem 'money-rails'
 gem 'countries', :git => 'http://github.com/hexorx/countries', :branch => 'master'
 gem 'htmlentities'
 gem 'enumerize', :git => 'http://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
