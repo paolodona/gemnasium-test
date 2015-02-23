@@ -1,4 +1,13 @@
 GIT
+  remote: http://github.com/HomeStayTravel/geoplanet
+  revision: 339272b68ada2a53419064cb4b13808ee6f04341
+  ref: 339272b68ada2a53419064cb4b13808ee6f04341
+  specs:
+    geoplanet (0.2.6)
+      json (>= 1.1.3)
+      rest-client (>= 0.9)
+
+GIT
   remote: http://github.com/amatsuda/kaminari.git
   revision: b6aa5650c262985ac79891f034fbd563b02d3642
   specs:
@@ -98,15 +107,17 @@ GIT
 
 GIT
   remote: https://github.com/tobiassvn/sidetiq
-  revision: 4f7d7daea3873443b17bf2f3da61619532bbeba2
+  revision: 3d78df37384e664bbb59df9091235a79700650aa
+  branch: master
   specs:
-    sidetiq (0.5.0)
+    sidetiq (0.6.3)
       celluloid (>= 0.14.1)
-      ice_cube (~> 0.11.0)
-      sidekiq (>= 2.16.0)
+      ice_cube (= 0.11.1)
+      sidekiq (>= 3.0.0)
 
 GEM
   remote: http://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.1.7)
       actionpack (= 4.1.7)
@@ -153,6 +164,8 @@ GEM
     airbrake (4.1.0)
       builder
       multi_json
+    ancestry (2.1.0)
+      activerecord (>= 3.0.0)
     arel (5.0.1.20140414130214)
     aws-sdk (1.57.0)
       aws-sdk-v1 (= 1.57.0)
@@ -162,7 +175,7 @@ GEM
     axiom-types (0.0.5)
       descendants_tracker (~> 0.0.1)
       ice_nine (~> 0.9)
-    bcrypt (3.1.7)
+    bcrypt (3.1.9)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -210,7 +223,7 @@ GEM
       mime-types (>= 1.16)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    childprocess (0.5.4)
+    childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     chronic_duration (0.10.6)
       numerizer (~> 0.1.1)
@@ -226,9 +239,10 @@ GEM
     coffee-script-source (1.8.0)
     colored (1.2)
     columnize (0.8.9)
-    connection_pool (2.0.0)
+    connection_pool (2.1.1)
     css_parser (1.3.5)
       addressable
+    curb (0.8.6)
     currencies (0.4.2)
     date_validator (0.7.1)
       activemodel
@@ -237,10 +251,11 @@ GEM
     decorates_before_rendering (0.0.3)
       activesupport (>= 3.2.6)
     descendants_tracker (0.0.3)
-    devise (3.3.0)
+    devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
@@ -259,7 +274,7 @@ GEM
     faker (1.4.3)
       i18n (~> 0.5)
     fakeweb (1.3.0)
-    ffi (1.9.5)
+    ffi (1.9.6)
     fog (1.24.0)
       fog-brightbox
       fog-core (~> 1.23)
@@ -301,30 +316,31 @@ GEM
     foundation-rails (5.2.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
+    geocoder (1.2.7)
     gli (2.12.2)
+    google_places (0.27.0)
+      httparty (~> 0.13.1)
     highline (1.6.21)
     hike (1.2.3)
     hiredis (0.5.2)
     hitimes (1.2.2)
     htmlentities (4.3.2)
     http_accept_language (1.0.2)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0.beta1)
-    ice_cube (0.11.3)
+    ice_cube (0.11.1)
     ice_nine (0.11.0)
     inflecto (0.0.2)
     ipaddress (0.8.0)
-    jquery-rails (3.1.2)
-      railties (>= 3.0, < 5.0)
-      thor (>= 0.14, < 2.0)
-    jquery-rails-cdn (1.0.3)
-      jquery-rails
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
     js-routes (0.9.9)
       railties (>= 3.2)
       sprockets-rails
-    json (1.8.1)
+    json (1.8.2)
     kgio (2.9.2)
     launchy (2.4.2)
       addressable (~> 2.3)
@@ -345,7 +361,7 @@ GEM
     mini_magick (3.8.1)
       subexec (~> 0.2.1)
     mini_portile (0.6.0)
-    minitest (5.4.2)
+    minitest (5.4.3)
     monetize (1.0.0)
       money (~> 6.4.0)
     money (6.4.0)
@@ -356,6 +372,7 @@ GEM
       money (~> 6.4.0)
       railties (>= 3.0)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -408,18 +425,24 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.7)
       sprockets-rails (~> 2.0)
+    rails-assets-carousel (1.2.2)
+      rails-assets-jquery
+    rails-assets-jquery (2.1.1)
+    rails-assets-jquery-ujs (1.0.2)
+      rails-assets-jquery (> 1.8)
+    rails-assets-sweetalert (0.3.2)
     railties (4.1.7)
       actionpack (= 4.1.7)
       activesupport (= 4.1.7)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
-    rake (10.3.2)
+    rake (10.4.2)
     recurrence (1.3.0)
       activesupport
       i18n
     redcarpet (3.2.0)
-    redis (3.1.0)
+    redis (3.2.0)
     redis-activesupport (4.0.0)
       activesupport (~> 4)
       redis-store (~> 1.1.0)
@@ -430,6 +453,8 @@ GEM
     ref (1.0.5)
     remotipart (1.2.1)
     request_store (1.0.8)
+    responders (1.1.1)
+      railties (>= 3.2, < 4.2)
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
@@ -449,7 +474,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rubyzip (1.1.6)
+    rubyzip (1.1.7)
     sass (3.2.19)
     sass-rails (4.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -458,7 +483,7 @@ GEM
       sprockets-rails (~> 2.0)
     select2-rails (3.5.9.1)
       thor (~> 0.14)
-    selenium-webdriver (2.43.0)
+    selenium-webdriver (2.45.0.dev3)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
@@ -470,12 +495,15 @@ GEM
       rails (>= 3.2)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
-    sidekiq (3.2.4)
-      celluloid (>= 0.15.2)
+    sidekiq (3.3.0)
+      celluloid (>= 0.16.0)
       connection_pool (>= 2.0.0)
       json
       redis (>= 3.0.6)
       redis-namespace (>= 1.3.1)
+    sidekiq-throttler (0.4.1)
+      activesupport
+      sidekiq (>= 2.5, < 4.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -509,7 +537,7 @@ GEM
     timecop (0.7.1)
     timers (4.0.1)
       hitimes
-    turbolinks (2.5.1)
+    turbolinks (2.5.2)
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -544,6 +572,7 @@ DEPENDENCIES
   activerecord-import
   acts_as_list
   airbrake
+  ancestry
   annotate!
   aws-sdk
   better_errors
@@ -561,6 +590,7 @@ DEPENDENCIES
   chronic_duration
   coffee-rails
   countries!
+  curb
   date_validator
   decorates_before_rendering
   devise
@@ -574,10 +604,11 @@ DEPENDENCIES
   fog
   font-awesome-sass
   foundation-rails (= 5.2.2.0)
+  geocoder
+  geoplanet!
+  google_places
   hiredis
   htmlentities
-  jquery-rails
-  jquery-rails-cdn
   jquery-turbolinks
   js-routes
   kaminari!
@@ -601,6 +632,10 @@ DEPENDENCIES
   rabl
   rack
   rails (= 4.1.7)
+  rails-assets-carousel
+  rails-assets-jquery
+  rails-assets-jquery-ujs
+  rails-assets-sweetalert
   rails_locale_detection!
   rake
   rc_rails!
@@ -614,11 +649,12 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.2)
   select2-rails
-  selenium-webdriver
+  selenium-webdriver (>= 2.45.0.dev3)
   sendgrid
   sextant
   shoulda-matchers
-  sidekiq
+  sidekiq (~> 3.3.0)
+  sidekiq-throttler
   sidetiq!
   simple_form!
   sinatra

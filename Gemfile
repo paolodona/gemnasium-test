@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+source 'https://rails-assets.org'
 
 gem 'rails', '4.1.7'
 gem 'rack'
@@ -11,15 +12,14 @@ gem 'hiredis'
 gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
 
 gem 'sinatra' # required by sidekiq/web
-gem 'sidekiq'
-gem 'sidetiq', :git => 'https://github.com/tobiassvn/sidetiq' # cron jobs in sidekiq
+gem 'sidekiq', "~>3.3.0"
+gem 'sidetiq', :git => 'https://github.com/tobiassvn/sidetiq', :branch => 'master' # cron jobs in sidekiq
+gem 'sidekiq-throttler'
 
 # front end
 gem "select2-rails"
 gem "therubyracer"
 gem 'coffee-rails'
-gem 'jquery-rails'
-gem 'jquery-rails-cdn'
 gem 'js-routes'
 gem 'sass-rails', "~>4.0.2"
 gem 'slim'
@@ -31,6 +31,10 @@ gem 'foundation-rails', '5.2.2.0'
 gem 'meta-tags', require:'meta_tags' # see https://github.com/kpumuk/meta-tags
 gem 'redcarpet'
 gem 'font-awesome-sass'
+gem 'rails-assets-jquery'
+gem 'rails-assets-jquery-ujs'
+gem 'rails-assets-sweetalert'
+gem 'rails-assets-carousel'
 
 # custom json views
 gem 'rabl'
@@ -102,6 +106,15 @@ gem 'uglifier', '>= 2.1.2'
 # sitemap
 gem 'sitemap_generator'
 
+# Geolocation
+gem 'geocoder'
+
+# Admin CRM
+gem 'google_places'
+gem 'geoplanet', git: 'http://github.com/HomeStayTravel/geoplanet', ref: '339272b68ada2a53419064cb4b13808ee6f04341'
+gem 'ancestry'
+gem 'curb' # cURL ruby
+
 gem 'utf8-cleaner' # leave this last so that middleware is the first in the chain
 
 group :development do
@@ -123,6 +136,7 @@ group :development, :test do
   gem 'byebug'
   gem 'spring-commands-rspec'
   gem 'rspec', '~> 2.14.1'
+  gem 'faker'
 end
 
 group :test do
@@ -134,6 +148,5 @@ group :test do
   gem 'fakeweb'
   gem 'timecop'
   gem 'launchy' #to open pages in integration tests
-  gem 'faker'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '>=2.45.0.dev3'
 end
