@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
-source 'https://rails-assets.org'
 
-gem 'rails', '4.1.7'
+gem 'rails', '4.1.14'
 gem 'rack'
 gem 'unicorn'
 
@@ -16,25 +15,27 @@ gem 'sidekiq', "~>3.3.0"
 gem 'sidetiq', :git => 'https://github.com/tobiassvn/sidetiq', :branch => 'master' # cron jobs in sidekiq
 gem 'sidekiq-throttler'
 
+gem 'stripe'
+
 # front end
 gem "select2-rails"
 gem "therubyracer"
 gem 'coffee-rails'
 gem 'js-routes'
-gem 'sass-rails', "~>4.0.2"
+gem 'sass-rails'
 gem 'slim'
-gem 'swfobject-rails', :git => 'https://github.com/geraudmathe/swfobject-rails.git', :branch => 'master'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'underscore-rails'
-gem 'foundation-rails', '5.2.2.0'
-gem 'meta-tags', require:'meta_tags' # see https://github.com/kpumuk/meta-tags
+gem 'foundation-rails', '5.5.1.2'
 gem 'redcarpet'
 gem 'font-awesome-sass'
-gem 'rails-assets-jquery'
-gem 'rails-assets-jquery-ujs'
-gem 'rails-assets-sweetalert'
-gem 'rails-assets-carousel'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-jquery-ujs'
+  gem 'rails-assets-sweetalert'
+  gem 'rails-assets-intl-tel-input'
+end
 
 # custom json views
 gem 'rabl'
@@ -48,9 +49,9 @@ gem 'simple_form', :git => 'http://github.com/plataformatec/simple_form.git'
 gem 'money', '6.4.0'
 gem 'money-rails'
 gem 'countries', :git => 'http://github.com/hexorx/countries', :branch => 'master'
+gem 'phony'
 gem 'htmlentities'
 gem 'enumerize', :git => 'http://github.com/brainspec/enumerize.git', :ref => '9dc06ba60d0f134db726c2da52c8d255dbc07eba'
-gem 'activemerchant', :require => 'active_merchant'
 gem 'encryptor'
 gem 'acts_as_list'
 gem 'rc_rails', :git => 'http://github.com/paolodona/resources_controller.git', :branch => 'master'
@@ -68,7 +69,7 @@ gem 'wicked' # Wizards
 # uploads
 gem 'carrierwave'
 gem 'fog'
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 1.57'
 gem 'remotipart'
 gem 'mini_magick'
 # gem 'lazy_high_charts'
@@ -83,7 +84,7 @@ gem 'premailer'
 gem 'premailer-rails'
 
 # system health
-gem 'airbrake'
+gem 'airbrake', '~> 5.0.0'
 gem 'newrelic_rpm'
 
 # pagination
@@ -92,36 +93,22 @@ gem 'kaminari', :git => 'http://github.com/amatsuda/kaminari.git'
 # PDF/CSV generation
 gem 'pdfkit'
 gem 'wkhtmltopdf-binary'
-
-# I18n
-gem 'localeapp'
-gem 'rails_locale_detection', :git => 'http://github.com/paolodona/rails_locale_detection.git', :branch => 'master'
-gem 'unlocalize', :git => 'http://github.com/paolodona/unlocalize', :branch => 'master'
-
-# Decorators
-gem 'draper', '~> 1.3'
-gem 'decorates_before_rendering'
+gem 'render_anywhere', :require => false
 gem 'uglifier', '>= 2.1.2'
-
-# sitemap
-gem 'sitemap_generator'
 
 # Geolocation
 gem 'geocoder'
 
-# Admin CRM
-gem 'google_places'
-gem 'geoplanet', git: 'http://github.com/HomeStayTravel/geoplanet', ref: '339272b68ada2a53419064cb4b13808ee6f04341'
-gem 'ancestry'
-gem 'curb' # cURL ruby
-
 gem 'utf8-cleaner' # leave this last so that middleware is the first in the chain
 
 group :development do
-  gem 'capistrano', '~> 2.15'
-  gem 'capistrano-ext', '~> 1.2'
-  gem 'capistrano-detect-migrations', '~> 0.6'
-  gem 'capistrano-deploytags', '~> 0.8'
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-faster-assets', '~> 1.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-deploytags', '~> 1.0.0', require: false
+  gem "airbrussh", :require => false
   gem 'bullet'
   gem 'sextant'
   gem 'annotate', :git => 'http://github.com/ctran/annotate_models.git'
@@ -129,6 +116,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem "spring"
+  gem 'iye', :git => 'https://github.com/paolodona/iye.git', :branch => 'master'
 end
 
 group :development, :test do
@@ -137,6 +125,8 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec', '~> 2.14.1'
   gem 'faker'
+  gem 'awesome_print'
+  gem 'puma' # to test webhooks with ngrok
 end
 
 group :test do
@@ -148,5 +138,5 @@ group :test do
   gem 'fakeweb'
   gem 'timecop'
   gem 'launchy' #to open pages in integration tests
-  gem 'selenium-webdriver', '>=2.45.0.dev3'
+  gem 'selenium-webdriver', '>=2.48.0'
 end
