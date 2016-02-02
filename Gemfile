@@ -46,7 +46,7 @@ gem 'devise_invitable', :git => 'http://github.com/scambra/devise_invitable', :r
 
 # utilities
 gem 'simple_form', :git => 'http://github.com/plataformatec/simple_form.git'
-gem 'money', '6.4.0'
+gem 'money', '~> 6.4'
 gem 'money-rails'
 gem 'countries', :git => 'http://github.com/hexorx/countries', :branch => 'master'
 gem 'phony'
@@ -57,7 +57,7 @@ gem 'acts_as_list'
 gem 'rc_rails', :git => 'http://github.com/paolodona/resources_controller.git', :branch => 'master'
 gem 'activerecord-import'
 gem 'chronic_duration'
-gem 'request_store', '~> 1.0.3' # Used instead of Thread.current, protects access in multithreaded environments
+gem 'request_store', '~> 1.0' # Used instead of Thread.current, protects access in multithreaded environments
 gem 'virtus', :git => 'http://github.com/solnic/virtus.git' # used for form objects
 gem 'paranoia' # sets records as deleted
 gem "recurrence" # for scheduling visits
