@@ -27,7 +27,7 @@ gem 'slim'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'underscore-rails'
-gem 'foundation-rails', '5.5.1.2'
+gem 'foundation-rails', '5.5.3.2'
 gem 'redcarpet'
 gem 'font-awesome-sass'
 source 'https://rails-assets.org' do
@@ -65,6 +65,7 @@ gem "liquid"     # to parse address templates in country objects
 gem "date_validator"
 gem "browser"
 gem 'wicked' # Wizards
+gem "intercom-rails" # Customer care
 
 # uploads
 gem 'carrierwave'
