@@ -11,7 +11,7 @@ gem 'hiredis'
 gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
 
 gem 'sinatra' # required by sidekiq/web
-gem 'sidekiq', "~>3.3.0"
+gem 'sidekiq', "< 4"
 gem 'sidetiq', :git => 'https://github.com/tobiassvn/sidetiq', :branch => 'master' # cron jobs in sidekiq
 gem 'sidekiq-throttler'
 
