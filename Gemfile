@@ -10,10 +10,13 @@ gem 'pg'
 gem 'hiredis'
 gem 'redis-activesupport', :require => ["redis", "redis/connection/hiredis", "redis-activesupport"]
 
-gem 'sinatra' # required by sidekiq/web
-gem 'sidekiq', "< 4"
-gem 'sidetiq', :git => 'https://github.com/tobiassvn/sidetiq', :branch => 'master' # cron jobs in sidekiq
-gem 'sidekiq-throttler'
+gem 'sinatra', require:nil # required by sidekiq/web
+gem 'sidekiq', "< 5"
+# cron jobs in sidekiq - see https://github.com/tobiassvn/sidetiq/issues/152
+# we can revert to the main project once they fix the bug
+gem 'sidetiq', :git => 'https://github.com/danilogcarolino/sidetiq', :ref => 'b1861eaec356720dc2e74624214a7b93ed1aac73'
+
+gem 'encrypted_strings', :git => 'https://github.com/pluginaweek/encrypted_strings'
 
 gem 'stripe'
 
@@ -65,7 +68,6 @@ gem "liquid"     # to parse address templates in country objects
 gem "date_validator"
 gem "browser"
 gem 'wicked' # Wizards
-gem "intercom-rails" # Customer care
 
 # uploads
 gem 'carrierwave'
