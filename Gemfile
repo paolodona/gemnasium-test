@@ -33,11 +33,13 @@ gem 'underscore-rails'
 gem 'foundation-rails', '5.5.3.2'
 gem 'redcarpet'
 gem 'font-awesome-sass'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery'
   gem 'rails-assets-jquery-ujs'
   gem 'rails-assets-sweetalert'
   gem 'rails-assets-intl-tel-input'
+  gem 'rails-assets-js-cookie'
 end
 
 # custom json views
