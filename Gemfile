@@ -89,7 +89,7 @@ gem 'premailer'
 gem 'premailer-rails'
 
 # system health
-gem 'airbrake', '~> 5.0.0'
+gem 'airbrake', '~> 5'
 gem 'newrelic_rpm'
 
 # pagination
@@ -107,13 +107,12 @@ gem 'geocoder'
 gem 'utf8-cleaner' # leave this last so that middleware is the first in the chain
 
 group :development do
-  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano', '~> 3.5.0'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-faster-assets', '~> 1.0'
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rbenv', '~> 2.0'
   gem 'capistrano-deploytags', '~> 1.0.0', require: false
-  gem "airbrussh", :require => false
   gem 'bullet'
   gem 'sextant'
   gem 'annotate', :git => 'http://github.com/ctran/annotate_models.git'
